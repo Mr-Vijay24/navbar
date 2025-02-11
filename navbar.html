@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation links */
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hover effect */
+        .navbar a:hover {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        /* Content for scrolling effect */
+        .content {
+            padding: 80px 20px;
+            font-size: 20px;
+            min-height: 100vh;
+            transition: background-color 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <a href="#" onclick="changeColor('#f4a261')">Home</a>
+        <a href="#" onclick="changeColor('#8ecae6')">About</a>
+        <a href="#" onclick="changeColor('#f77f00')">Services</a>
+        <a href="#" onclick="changeColor('#2a9d8f')">Portfolio</a>
+        <a href="#" onclick="changeColor('#d62828')">Contact</a>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>
